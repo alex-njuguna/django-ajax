@@ -11,12 +11,16 @@
     
     
 {% block content %}
-    {% for post in posts %}
-        <h4>{{ post.title }}</h4>
-        {{ post.body }}
-    {% endfor %}
+    
+    <div id="post-box" class=""></div>
 
-    <div id="hello-world"></div>
+    <div id="spinner-box" class="text-center">
+        <div class="spinner-border" role="status"></div>
+    </div>
+
+    <div class="text-center mb-3" id="end-box">
+        <button class="btn btn-primary" id="load-btn">Load more...</button>
+    </div>
         
 {% endblock content %}
     
