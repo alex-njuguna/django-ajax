@@ -22,5 +22,9 @@ class Post(models.Model):
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
+    @property
+    def like_count(self):
+        return self.liked.all().count()
+
     def __str__(self):
         return str(self.title)
